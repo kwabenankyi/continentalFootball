@@ -6,17 +6,16 @@ namespace ChampionsAlgo;
 public static class FixtureFactory
 {
     private static readonly Random rnd;
-    public static void SetFixture(Fixture fixture, Club home, Club away)
+    public static void SetFixture(Fixture fixture)
     {
-        home.Fixtures.Add(fixture);
-        away.Fixtures.Add(fixture);
-        Console.WriteLine(fixture);
+        fixture.HomeClub.Fixtures.Add(fixture);
+        fixture.AwayClub.Fixtures.Add(fixture);
     }
 
-    public static void RemoveFixture(Fixture fixture, Club home, Club away)
+    public static void RemoveFixture(Fixture fixture)
     {
-        home.Fixtures.Remove(fixture);
-        away.Fixtures.Remove(fixture);
+        fixture.HomeClub.Fixtures.Remove(fixture);
+        fixture.AwayClub.Fixtures.Remove(fixture);
     }
 
     public static void GenerateFixturesFor(Club inClub, Collection<DrawPot> allPots, List<Fixture> allFix)
@@ -30,7 +29,7 @@ public static class FixtureFactory
                 {
                     var opponent = pot.GetClubToPlayAtHome(inClub, inClub.GetPot());
                     var newFix = new Fixture(inClub, opponent);
-                    SetFixture(newFix, inClub, opponent);
+                    SetFixture(newFix);
                     allFix.Add(newFix);
                     /*Club possibleOpponent = null;
                     try
@@ -78,7 +77,7 @@ public static class FixtureFactory
                 {
                     var opponent = pot.GetClubToPlayAtAway(inClub, inClub.GetPot());
                     var newFix = new Fixture(opponent, inClub);
-                    SetFixture(newFix, opponent, inClub);
+                    SetFixture(newFix);
                     allFix.Add(newFix);
                 }
             }

@@ -1,0 +1,134 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\anthony.nkyi\\Documents\\continentalAlgo\\continentalFootball\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{CF283EA3-9736-450C-8F27-04441C050BE0}|ChampionsAlgo.csproj|c:\\users\\anthony.nkyi\\documents\\continentalalgo\\continentalfootball\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CF283EA3-9736-450C-8F27-04441C050BE0}|ChampionsAlgo.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CF283EA3-9736-450C-8F27-04441C050BE0}|ChampionsAlgo.csproj|c:\\users\\anthony.nkyi\\documents\\continentalalgo\\continentalfootball\\fixturefactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CF283EA3-9736-450C-8F27-04441C050BE0}|ChampionsAlgo.csproj|solutionrelative:fixturefactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CF283EA3-9736-450C-8F27-04441C050BE0}|ChampionsAlgo.csproj|c:\\users\\anthony.nkyi\\documents\\continentalalgo\\continentalfootball\\resources\\clubs2425.csv||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{CF283EA3-9736-450C-8F27-04441C050BE0}|ChampionsAlgo.csproj|solutionrelative:resources\\clubs2425.csv||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CF283EA3-9736-450C-8F27-04441C050BE0}|ChampionsAlgo.csproj|c:\\users\\anthony.nkyi\\documents\\continentalalgo\\continentalfootball\\potfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CF283EA3-9736-450C-8F27-04441C050BE0}|ChampionsAlgo.csproj|solutionrelative:potfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CF283EA3-9736-450C-8F27-04441C050BE0}|ChampionsAlgo.csproj|c:\\users\\anthony.nkyi\\documents\\continentalalgo\\continentalfootball\\clubsfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CF283EA3-9736-450C-8F27-04441C050BE0}|ChampionsAlgo.csproj|solutionrelative:clubsfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CF283EA3-9736-450C-8F27-04441C050BE0}|ChampionsAlgo.csproj|c:\\users\\anthony.nkyi\\documents\\continentalalgo\\continentalfootball\\championsalgo.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{CF283EA3-9736-450C-8F27-04441C050BE0}|ChampionsAlgo.csproj|solutionrelative:championsalgo.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "PotFactory.cs",
+              "DocumentMoniker": "C:\\Users\\anthony.nkyi\\Documents\\continentalAlgo\\continentalFootball\\PotFactory.cs",
+              "RelativeDocumentMoniker": "PotFactory.cs",
+              "ToolTip": "C:\\Users\\anthony.nkyi\\Documents\\continentalAlgo\\continentalFootball\\PotFactory.cs",
+              "RelativeToolTip": "PotFactory.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-28T08:25:24.904Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FixtureFactory.cs",
+              "DocumentMoniker": "C:\\Users\\anthony.nkyi\\Documents\\continentalAlgo\\continentalFootball\\FixtureFactory.cs",
+              "RelativeDocumentMoniker": "FixtureFactory.cs",
+              "ToolTip": "C:\\Users\\anthony.nkyi\\Documents\\continentalAlgo\\continentalFootball\\FixtureFactory.cs*",
+              "RelativeToolTip": "FixtureFactory.cs*",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAQwBsAAAA4AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-28T08:25:07.74Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "clubs2425.csv",
+              "DocumentMoniker": "C:\\Users\\anthony.nkyi\\Documents\\continentalAlgo\\continentalFootball\\Resources\\clubs2425.csv",
+              "RelativeDocumentMoniker": "Resources\\clubs2425.csv",
+              "ToolTip": "C:\\Users\\anthony.nkyi\\Documents\\continentalAlgo\\continentalFootball\\Resources\\clubs2425.csv",
+              "RelativeToolTip": "Resources\\clubs2425.csv",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002120|",
+              "WhenOpened": "2024-08-28T08:25:07.567Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\anthony.nkyi\\Documents\\continentalAlgo\\continentalFootball\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\anthony.nkyi\\Documents\\continentalAlgo\\continentalFootball\\Program.cs*",
+              "RelativeToolTip": "Program.cs*",
+              "ViewState": "AQIAABIAAAAAAAAAAAAqwCYAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-28T08:18:57.929Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ClubsFactory.cs",
+              "DocumentMoniker": "C:\\Users\\anthony.nkyi\\Documents\\continentalAlgo\\continentalFootball\\ClubsFactory.cs",
+              "RelativeDocumentMoniker": "ClubsFactory.cs",
+              "ToolTip": "C:\\Users\\anthony.nkyi\\Documents\\continentalAlgo\\continentalFootball\\ClubsFactory.cs",
+              "RelativeToolTip": "ClubsFactory.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAPAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-28T08:15:45.916Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ChampionsAlgo",
+              "DocumentMoniker": "C:\\Users\\anthony.nkyi\\Documents\\continentalAlgo\\continentalFootball\\ChampionsAlgo.csproj",
+              "RelativeDocumentMoniker": "ChampionsAlgo.csproj",
+              "ToolTip": "C:\\Users\\anthony.nkyi\\Documents\\continentalAlgo\\continentalFootball\\ChampionsAlgo.csproj",
+              "RelativeToolTip": "ChampionsAlgo.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-08-28T08:12:56.111Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

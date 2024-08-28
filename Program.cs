@@ -5,7 +5,7 @@ namespace ChampionsAlgo
 {
     class Program
     {
-        public static string filename = "/Users/anthonynkyi/Documents/footWork/ChampionsAlgo/Resources/clubs2425.csv";
+        public static string filename = "clubs2425.csv";
         public static void PrintClubsInPots(Collection<DrawPot> allPots)
         {
             foreach (var drawPot in allPots)
@@ -32,16 +32,37 @@ namespace ChampionsAlgo
                 (allClubs, champ, 4);
             
             var fixtures = new List<Fixture>();
-            
+            var generatedFixtures = new List<Fixture>();
             
             PrintClubsInPots(allPots);
-            foreach (var club in allPots[0].Clubs)
+            foreach (var pot in allPots)
             {
-                FixtureFactory.GenerateFixturesFor(club, allPots, fixtures);
-                //backtrack when error to solve
+                while (pot.Clubs.Any(c => c.Fixtures.Count < 8))
+                {
+                    try
+                    {
+                        foreach (var club in pot.Clubs)
+                        {
+                            FixtureFactory.GenerateFixturesFor(club, allPots, fixtures);
+                            //backtrack when error to solve
+                        }
+                    }
+                    catch (Exception e)
+                    {
+                        foreach (Fixture f in fixtures.Where(f => !generatedFixtures.Contains(f)))
+                        {
+                            FixtureFactory.RemoveFixture(f);
+                        }
+                        fixtures = generatedFixtures;
+                    }
+                    generatedFixtures.AddRange(fixtures);
+                    fixtures = new List<Fixture>();
+                }
             }
+           
+            fixtures.ForEach(Console.WriteLine);
             Console.WriteLine(allClubs.Count(c => c.AwayFixtures().Count == 4 && c.HomeFixtures().Count == 4));
-            Console.WriteLine(allClubs.Count(c => c.NeedsHomeFixtureFromPot(allPots[0]) || c.NeedsAwayFixtureFromPot(allPots[0])));
+            Console.WriteLine(fixtures.Count);
         }
     }
 }
