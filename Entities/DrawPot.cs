@@ -55,6 +55,6 @@ public class DrawPot
 
     public override string ToString()
     {
-        return Clubs.ToString();
+        return string.Join(", ", Clubs);
     }
 }

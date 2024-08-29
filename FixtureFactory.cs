@@ -6,7 +6,7 @@ namespace ChampionsAlgo;
 public static class FixtureFactory
 {
     private static readonly Random rnd;
-    public static void SetFixture(Fixture fixture)
+    private static void SetFixture(Fixture fixture)
     {
         fixture.HomeClub.Fixtures.Add(fixture);
         fixture.AwayClub.Fixtures.Add(fixture);
@@ -83,7 +83,18 @@ public static class FixtureFactory
             }
         }
     }
-    
+
+    public static void ExportFixtures(List<Fixture> fixtures, string filename)
+    {
+        using (var exportFile = new StreamWriter("../../../Resources/" + filename))
+        {
+            foreach (Fixture f in fixtures)
+            {
+                exportFile.WriteLine(f);
+            }
+        }
+    }
+
     /*public static void RearrangeFixtures(List<Club> allClubs, ObservableCollection<DrawPot> allPots,
                                                      List<Fixture> allFixtures)
         {
@@ -94,7 +105,7 @@ public static class FixtureFactory
                 // get club 1's pot, then first eligible club in same pot that
                 // needs fixture against club 1's opponent
                 var currentPot = club.GetPot(allPots);
-                
+
                 var currentClubHomeSurplus = club.HomeFixtures().
                     Where(f => club.HomeFixtures().
                         Select(g => g.AwayClub.GetPot(allPots)).
@@ -103,7 +114,7 @@ public static class FixtureFactory
                     Where(f => club.AwayFixtures().
                         Select(g => g.HomeClub.GetPot(allPots)).
                         Count(h => h == f.HomeClub.GetPot(allPots)) > 2);
-    
+
                 foreach (var fix in currentClubHomeSurplus)
                 {
                     try

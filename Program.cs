@@ -5,7 +5,7 @@ namespace ChampionsAlgo
 {
     class Program
     {
-        public static string filename = "clubs2425.csv";
+        private static string filename = @"../../../Resources/uclclubs2425.csv";
         public static void PrintClubsInPots(Collection<DrawPot> allPots)
         {
             foreach (var drawPot in allPots)
@@ -23,46 +23,42 @@ namespace ChampionsAlgo
         {
             fixtures.ForEach(Console.WriteLine);
         }
+
+        public static List<Fixture> GenerateFixtures(Collection<DrawPot> allPots)
+        {
+            var generatedFixtures = new List<Fixture>();
+            
+            foreach (var pot in allPots)
+            {
+                Console.WriteLine($"Generating fixtures for {pot}.");
+                while (true)
+                {
+                    var fixtures = new List<Fixture>();
+                    try
+                    {
+                        pot.Clubs.ForEach(club => FixtureFactory.GenerateFixturesFor(club, allPots, fixtures));
+                        generatedFixtures.AddRange(fixtures);
+                        break;
+                    }
+                    catch (Exception)
+                    {
+                        fixtures.Where(f => !generatedFixtures.Contains(f)).ToList()
+                            .ForEach(f => FixtureFactory.RemoveFixture(f));
+                    }
+                }
+            }
+
+            return generatedFixtures;
+        }
         
         public static void Main()
         {
             var allClubs = ClubsFactory.GenerateClubs(filename);
             var champ = allClubs.First(c => c.Name.Equals("Real Madrid"));
-            var allPots = PotFactory.GeneratePots
-                (allClubs, champ, 4);
             
-            var fixtures = new List<Fixture>();
-            var generatedFixtures = new List<Fixture>();
-            
-            PrintClubsInPots(allPots);
-            foreach (var pot in allPots)
-            {
-                while (pot.Clubs.Any(c => c.Fixtures.Count < 8))
-                {
-                    try
-                    {
-                        foreach (var club in pot.Clubs)
-                        {
-                            FixtureFactory.GenerateFixturesFor(club, allPots, fixtures);
-                            //backtrack when error to solve
-                        }
-                    }
-                    catch (Exception e)
-                    {
-                        foreach (Fixture f in fixtures.Where(f => !generatedFixtures.Contains(f)))
-                        {
-                            FixtureFactory.RemoveFixture(f);
-                        }
-                        fixtures = generatedFixtures;
-                    }
-                    generatedFixtures.AddRange(fixtures);
-                    fixtures = new List<Fixture>();
-                }
-            }
-           
-            fixtures.ForEach(Console.WriteLine);
-            Console.WriteLine(allClubs.Count(c => c.AwayFixtures().Count == 4 && c.HomeFixtures().Count == 4));
-            Console.WriteLine(fixtures.Count);
+            var generatedFixtures = GenerateFixtures(PotFactory.GeneratePots(allClubs, champ, 4));
+            Console.WriteLine();
+            FixtureFactory.ExportFixtures(generatedFixtures, "fixtures2.csv");
         }
     }
 }
